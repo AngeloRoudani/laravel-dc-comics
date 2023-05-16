@@ -7,7 +7,7 @@
 @section('content')
 
     <div class="row">
-        <div class="card col-6">
+        <div class="card col-4 mx-auto p-2">
             <img src="{{$dataComics->thumb}}" class="card-img-top" alt="">
             <div class="card-body">
                 <ul class="list-group list-group-flush">

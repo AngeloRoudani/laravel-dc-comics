@@ -5,10 +5,10 @@
 @section('content')
 
     
-    <div class="row">
+    <div class="row justify-content-between">
         @foreach ($comics as $comic )
 
-        <div class="card col-3">
+        <div class="card col-3 m-2 p-1">
             <img src="{{$comic->thumb}}" class="card-img-top" alt="">
             <div class="card-body">
                 <ul class="list-group list-group-flush">
