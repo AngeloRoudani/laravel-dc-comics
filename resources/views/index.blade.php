@@ -4,8 +4,8 @@
     
 @section('content')
 
-    <div>Ciao</div>
-    <!--<div class="row">
+    
+    <div class="row">
         @foreach ($comics as $comic )
 
         <div class="card col-3">
@@ -17,8 +17,12 @@
                     <li class="list-group-item">{{$comic->sale_date}}</li>
                 </ul>
             </div>
+            <a class="btn btn-success" 
+                href="{{route('comics.show', ['comic' => $comic->id])}}">  
+                Compra
+            </a>
         </div>
 
         @endforeach
-    </div>-->
+    </div>
 @endsection
