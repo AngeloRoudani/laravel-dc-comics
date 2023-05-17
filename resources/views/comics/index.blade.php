@@ -27,13 +27,14 @@
                 href="{{route('comics.edit', ['comic' => $comic->id])}}">  
                 Modifica
             </a>
+            <!--assegno al button un ascoltatore di eventi per far apparire il modal-->
                 <button type="submit" class="btn btn-danger mt-1 d-block w-100" id="erase">
                     Elimina
                 </button>
 
             <!--inizio modal per richiesta autorizzazione delete-->
 
-            <div class="modal" tabindex="-1">
+            <div class="modal myDisplay-none" tabindex="1" id="myModal">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">

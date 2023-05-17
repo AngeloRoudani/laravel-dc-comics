@@ -6,18 +6,13 @@ import.meta.glob([
 ])
 
 const erase = document.getElementById('erase');
+const modal = document.getElementById('myModal');
 
 erase.addEventListener('click', 
 
-    function () {
-        
-        const myModal = document.getElementById('myModal')
-        const myInput = document.getElementById('myInput')
-        
-        myModal.addEventListener('shown.bs.modal', () => {
-            myInput.focus()
-        })
-        
+    function () { 
+
+        modal.classList.add('myDisplay');
 
 })
 
