@@ -21,6 +21,10 @@
                 href="{{route('comics.show', ['comic' => $comic->id])}}">  
                 Compra
             </a>
+            <a class="btn btn-secondary" 
+                href="{{route('comics.edit', ['comic' => $comic->id])}}">  
+                Modifica
+            </a>
         </div>
 
         @endforeach
