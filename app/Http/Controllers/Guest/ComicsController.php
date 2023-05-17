@@ -59,8 +59,8 @@ class ComicsController extends Controller
      */
     public function show($id)
     {
-        $dataComic = Comic::find($id);
-        return view('comics.show', compact('dataComic'));
+        $comic = Comic::find($id);
+        return view('comics.show', compact('comic'));
         
     }
 
@@ -102,6 +102,8 @@ class ComicsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $comic = Comic::find($id);
+        $comic->delete();
+        return redirect()->route('comics.index');
     }
 }
