@@ -20,7 +20,5 @@
                 <p>{{$comic->description}}</p>
             </div>
         </div>
-
-        
     </div>
 @endsection

@@ -9,7 +9,7 @@
 
             <form action="{{route('comics.update',['comic'=> $comic->id])}}" method="POST">
             @csrf
-            @method('PATCH')
+            @method('PUT')
 
                 <div class="mb-3">
                     <label for="url" class="form-label">Modifica url</label>
