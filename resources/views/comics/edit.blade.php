@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row justify-content-between">
 
-            <form action="{{route('comics.edit',['comic'=> $comic->id])}}" method="POST">
+            <form action="{{route('comics.update',['comic'=> $comic->id])}}" method="POST">
             @csrf
             @method('PATCH')
 
