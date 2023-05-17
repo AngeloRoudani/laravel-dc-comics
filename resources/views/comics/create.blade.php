@@ -10,24 +10,24 @@
         <form action="{{route('comics.store')}}" method="POST">
         @csrf
             <div class="mb-3">
-                <label for="url">Inserisci url</label>
-                <input type="text" id="url" name="url">
+                <label for="url" class="form-label">Inserisci url</label>
+                <input type="text" id="url" name="url" class="form-control">
             </div>
             <div class="mb-3">
-                <label for="title">Inserisci titolo Fumetto</label>
-                <input type="text" id="title" name="title" >
+                <label for="title" class="form-label">Inserisci titolo Fumetto</label>
+                <input type="text" id="title" name="title" class="form-control">
             </div>
             <div class="mb-3">
-                <label for="price">Inserisci prezzo</label>
-                <input type="text" id="price" name="price" >
+                <label for="price" class="form-label">Inserisci prezzo</label>
+                <input type="text" id="price" name="price" class="form-control" >
             </div>
             <div class="mb-3">
-                <label for="sale">Inserisci data</label>
-                <input type="text" id="sale" name="sale" >
+                <label for="sale" class="form-label">Inserisci data</label>
+                <input type="text" id="sale" name="sale"  class="form-control">
             </div>
             <div class="mb-3">
-                <label for="description">Inserisci descrizione</label>
-                <input type="text" id="description" name="description" >
+                <label for="description" class="form-label">Inserisci descrizione</label>
+                <input type="text" id="description" name="description"  class="form-control">
             </div>
 
             <button type="submit">Crea</button>
