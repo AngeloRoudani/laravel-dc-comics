@@ -32,7 +32,7 @@
                     <input type="text" id="description" name="description"  class="form-control" value="{{$comic->description}}">
                 </div>
 
-                <button type="submit">Modifica</button>
+                <button type="submit" class="btn btn-success">Modifica</button>
             </form>
 
         </div>

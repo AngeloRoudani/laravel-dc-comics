@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('price', 10);
             $table->date('sale_date');
             $table->text('description');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

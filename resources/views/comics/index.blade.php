@@ -28,7 +28,7 @@
                 Modifica
             </a>
             <form action="{{route('comics.destroy', ['comic', $comic->id])}}">
-                <button type="submit" class="btn btn-danger mt-1 d-block w-100" method="POST" name="delete">
+                <button type="submit" class="btn btn-danger mt-1 d-block w-100" method="POST">
                     @csrf
                     @method('DELETE')
                     Elimina
