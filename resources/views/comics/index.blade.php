@@ -4,7 +4,7 @@
     
 @section('content')
 
-    
+    <!--creazione cards-->
     <div class="row justify-content-between">
         @foreach ($comics as $comic )
 
@@ -27,13 +27,38 @@
                 href="{{route('comics.edit', ['comic' => $comic->id])}}">  
                 Modifica
             </a>
-            <form action="{{route('comics.destroy',['comic' => $comic->id])}}" method="POST">
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="btn btn-danger mt-1 d-block w-100">
+                <button type="submit" class="btn btn-danger mt-1 d-block w-100" id="delete">
                     Elimina
                 </button>
-            </form>
+
+            <!--inizio modal per richiesta autorizzazione delete-->
+
+            <div class="modal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Richiesta Autorizzazione</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Sei sicuro di voler cancellare il fumetto?</p>
+                        </div>
+                        <div class="modal-footer">
+
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annulla</button>
+                            <!--button del destroy-->
+                            <form action="{{route('comics.destroy',['comic' => $comic->id])}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger mt-1 d-block w-100">
+                                    Elimina
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
 
         @endforeach
