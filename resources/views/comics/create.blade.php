@@ -30,7 +30,7 @@
                     <input type="text" id="description" name="description"  class="form-control">
                 </div>
 
-                <button type="submit">Crea</button>
+                <button type="submit" class="btn btn-success">Crea</button>
             </form>
 
         </div>

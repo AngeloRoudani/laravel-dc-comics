@@ -27,10 +27,10 @@
                 href="{{route('comics.edit', ['comic' => $comic->id])}}">  
                 Modifica
             </a>
-            <form action="{{route('comics.destroy', ['comic', $comic->id])}}">
+            <form action="{{route('comics.destroy',['comic' => $comic->id])}}">
+                @csrf
+                @method('DELETE')
                 <button type="submit" class="btn btn-danger mt-1 d-block w-100" method="POST">
-                    @csrf
-                    @method('DELETE')
                     Elimina
                 </button>
             </form>
