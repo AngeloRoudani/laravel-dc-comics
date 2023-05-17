@@ -27,7 +27,7 @@
                 href="{{route('comics.edit', ['comic' => $comic->id])}}">  
                 Modifica
             </a>
-                <button type="submit" class="btn btn-danger mt-1 d-block w-100" id="delete">
+                <button type="submit" class="btn btn-danger mt-1 d-block w-100" id="erase">
                     Elimina
                 </button>
 

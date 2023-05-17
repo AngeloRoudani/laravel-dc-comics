@@ -5,16 +5,19 @@ import.meta.glob([
     '../img/**'
 ])
 
+const erase = document.getElementById('erase');
 
+erase.addEventListener('click', 
 
-const myModal = document.getElementById('Modal');
-const myInput = document.getElementById('delete');
-
-myInput.addEventListener('click', function () {
-
-    myModal.addEventListener('shown.bs.modal', () => {
-        myInput.focus()
-    })
+    function () {
+        
+        const myModal = document.getElementById('myModal')
+        const myInput = document.getElementById('myInput')
+        
+        myModal.addEventListener('shown.bs.modal', () => {
+            myInput.focus()
+        })
+        
 
 })
 
