@@ -10,8 +10,8 @@
             <form action="{{route('comics.store')}}" method="POST">
             @csrf
                 <div class="mb-3">
-                    <label for="url" class="form-label">Inserisci url</label>
-                    <input type="text" id="url" name="url" class="form-control" value="{{ old('thumb') }}">
+                    <label for="thumb" class="form-label">Inserisci url</label>
+                    <input type="text" id="thumb" name="thumb" class="form-control" value="{{ old('thumb') }}">
                     @error('thumb')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
@@ -31,15 +31,15 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="sale" class="form-label">Inserisci data</label>
-                    <input type="text" id="sale" name="sale"  class="form-control" value="{{ old('sale_date') }}">
+                    <label for="sale_date" class="form-label">Inserisci data</label>
+                    <input type="text" id="sale_date" name="sale_date"  class="form-control" value="{{ old('sale_date') }}">
                     @error('sale_date')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label">Inserisci descrizione</label>
-                    <textarea type="text" id="description" name="description"  class="form-control">{{ old('title') }}</textarea>
+                    <textarea type="text" id="description" name="description"  class="form-control">{{ old('description') }}</textarea>
                     @error('description')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror

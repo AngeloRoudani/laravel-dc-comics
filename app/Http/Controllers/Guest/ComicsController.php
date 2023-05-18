@@ -44,17 +44,17 @@ class ComicsController extends Controller
             'thumb'=> 'required|url|max:255',
             'title'=> 'required|max:50',
             'price'=> 'required|max:10',
-            'sale_date'=> 'required',
+            'sale_date'=> 'required|date_format:Y-m-d',
             'description'=> 'required|min:30|max:5000',
         ]);
 
         $comic_data = $request->all();
 
         $newComics = new Comic();
-        $newComics->thumb = $comic_data["url"];
+        $newComics->thumb = $comic_data["thumb"];
         $newComics->title = $comic_data["title"];
         $newComics->price = $comic_data["price"];
-        $newComics->sale_date = $comic_data["sale"];
+        $newComics->sale_date = $comic_data["sale_date"];
         $newComics->description = $comic_data["description"];
         $newComics->save();
 
