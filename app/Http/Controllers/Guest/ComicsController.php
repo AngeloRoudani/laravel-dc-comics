@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Guest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Comic;
+use Illuminate\Support\Facades\Validator;
 
 
 class ComicsController extends Controller
@@ -39,14 +40,24 @@ class ComicsController extends Controller
     public function store(Request $request)
     {
 
-        $request->validate([
+        $rules = [
 
             'thumb'=> 'required|url|max:255',
             'title'=> 'required|max:50',
             'price'=> 'required|max:10',
             'sale_date'=> 'required|date_format:Y-m-d',
             'description'=> 'required|min:30|max:5000',
-        ]);
+        ];
+
+        $message = [
+            'required' => 'Il campo :attribute non può essere vuoto',
+            'url' =>"URL non valido",
+            'max'=> ":attribute non può avre più di :max caratteri",
+            'min'=> ":attribute non può avre meno di :min caratteri",
+            'date_format' => "La data inserita deve avere il formato :format"
+        ];
+
+        $request->validate($rules, $message);
 
         $comic_data = $request->all();
 
@@ -96,14 +107,25 @@ class ComicsController extends Controller
     public function update(Request $request, $id)
     {
 
-        $request->validate([
+        
+        $rules = [
 
             'thumb'=> 'required|url|max:255',
             'title'=> 'required|max:50',
             'price'=> 'required|max:10',
             'sale_date'=> 'required|date_format:Y-m-d',
             'description'=> 'required|min:30|max:5000',
-        ]);
+        ];
+
+        $message = [
+            'required' => 'Il campo :attribute non può essere vuoto',
+            'url' =>"URL non valido",
+            'max'=> ":attribute non può avre più di :max caratteri",
+            'min'=> ":attribute non può avre meno di :min caratteri",
+            'date_format' => "La data inserita deve avere il formato :format"
+        ];
+
+        $request->validate($rules, $message);
 
         $comic = Comic::find($id);
         $dataComic = $request->all();
